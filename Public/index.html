@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Budget Tracker – Sign in</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="center-screen">
+  <main class="card">
+    <h1 data-i18n="welcome">Budget&nbsp;Tracker</h1>
+    <button id="googleBtn" class="btn-google">
+      <img src="https://accounts.google.com/favicon.ico" alt=""> <span data-i18n="signin_google">Sign in with Google</span>
+    </button>
+    <footer class="lang-switch">
+      <label for="langSel" data-i18n="language">Language</label>
+      <select id="langSel"></select>
+    </footer>
+  </main>
+</body>
+</html>
