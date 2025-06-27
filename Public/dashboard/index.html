@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="title_dash">My Budget</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+  <script defer src="i18n.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h2 id="balanceLbl">0.00</h2>
+    <div>
+      <span id="themeToggle" title="Toggle theme">🌙</span>
+      <select id="langSel"></select>
+      <button id="logoutBtn" title="Sign out">⎋</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <section id="addForm">
+      <h3 data-i18n="new_entry">New Entry</h3>
+      <input id="amount" type="number" placeholder="0.00">
+      <select id="type">
+        <option value="income" data-i18n="income">Income</option>
+        <option value="expense" data-i18n="expense">Expense</option>
+      </select>
+      <input id="category" placeholder="Category">
+      <input id="note" placeholder="Note">
+      <button id="addBtn" data-i18n="add">Add</button>
+    </section>
+
+    <section>
+      <h3 data-i18n="history">History</h3>
+      <ul id="txList"></ul>
+    </section>
+  </main>
+</body>
+</html>
